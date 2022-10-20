@@ -985,6 +985,336 @@ namespace SqlSugar
                 return Tuple.Create<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>>(result, result2, result3, result4, result5, result6, result7);
             }
         }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, object, object, object, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>>(result.Rest.Item1));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, object, object, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>, List<T9>>(result.Rest.Item1, result.Rest.Item2));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, object, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>, List<T9>, List<T10>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>, List<T9>, List<T10>, List<T11>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4, result.Rest.Item5));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4, result.Rest.Item5, result.Rest.Item6));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(string sql, object parameters = null)
+        {
+            var parsmeterArray = this.GetParameters(parameters);
+            this.Context.InitMappingInfo<T>();
+            var builder = InstanceFactory.GetSqlbuilder(this.Context.CurrentConnectionConfig);
+            builder.SqlQueryBuilder.sql.Append(sql);
+            if (parsmeterArray != null && parsmeterArray.Any())
+                builder.SqlQueryBuilder.Parameters.AddRange(parsmeterArray);
+            using (var dataReader = this.GetDataReader(builder.SqlQueryBuilder.ToSqlString(), builder.SqlQueryBuilder.Parameters.ToArray()))
+            {
+                DbDataReader DbReader = (DbDataReader)dataReader;
+                List<T> result = new List<T>();
+                if (DbReader.HasRows)
+                {
+                    result = GetData<T>(typeof(T), dataReader);
+                }
+                else
+                {
+                    dataReader.Read();
+                }
+                List<T2> result2 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T2>();
+                    result2 = GetData<T2>(typeof(T2), dataReader);
+                }
+                List<T3> result3 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T3>();
+                    result3 = GetData<T3>(typeof(T3), dataReader);
+                }
+                List<T4> result4 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T4>();
+                    result4 = GetData<T4>(typeof(T4), dataReader);
+                }
+                List<T5> result5 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T5>();
+                    result5 = GetData<T5>(typeof(T5), dataReader);
+                }
+                List<T6> result6 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T6>();
+                    result6 = GetData<T6>(typeof(T6), dataReader);
+                }
+                List<T7> result7 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T7>();
+                    result7 = GetData<T7>(typeof(T7), dataReader);
+                }
+                List<T8> result8 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T8>();
+                    result8 = GetData<T8>(typeof(T8), dataReader);
+                }
+                List<T9> result9 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T9>();
+                    result9 = GetData<T9>(typeof(T9), dataReader);
+                }
+                List<T10> result10 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T10>();
+                    result10 = GetData<T10>(typeof(T10), dataReader);
+                }
+                List<T11> result11 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T11>();
+                    result11 = GetData<T11>(typeof(T11), dataReader);
+                }
+                List<T12> result12 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T12>();
+                    result12 = GetData<T12>(typeof(T12), dataReader);
+                }
+                List<T13> result13 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T13>();
+                    result13 = GetData<T13>(typeof(T13), dataReader);
+                }
+                List<T14> result14 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T14>();
+                    result14 = GetData<T14>(typeof(T14), dataReader);
+                }
+                builder.SqlQueryBuilder.Clear();
+                if (this.Context.Ado.DataReaderParameters != null)
+                {
+                    foreach (IDataParameter item in this.Context.Ado.DataReaderParameters)
+                    {
+                        var parameter = parsmeterArray.FirstOrDefault(it => item.ParameterName.Substring(1) == it.ParameterName.Substring(1));
+                        if (parameter != null)
+                        {
+                            parameter.Value = item.Value;
+                        }
+                    }
+                    this.Context.Ado.DataReaderParameters = null;
+                }
+                return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>>>(result, result2, result3, result4, result5, result6, result7, Tuple.Create<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>>(result8, result9, result10, result11, result12, result13, result14));
+            }
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, object, object, object, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, new Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4, result.Rest.Item5, result.Rest.Item6, result.Rest.Item7, new Tuple<List<T15>>(result.Rest.Rest.Item1)));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, object, object, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, new Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4, result.Rest.Item5, result.Rest.Item6, result.Rest.Item7, new Tuple<List<T15>, List<T16>>(result.Rest.Rest.Item1, result.Rest.Rest.Item2)));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, object, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, new Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4, result.Rest.Item5, result.Rest.Item6, result.Rest.Item7, new Tuple<List<T15>, List<T16>, List<T17>>(result.Rest.Rest.Item1, result.Rest.Rest.Item2, result.Rest.Rest.Item3)));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, new Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4, result.Rest.Item5, result.Rest.Item6, result.Rest.Item7, new Tuple<List<T15>, List<T16>, List<T17>, List<T18>>(result.Rest.Rest.Item1, result.Rest.Rest.Item2, result.Rest.Rest.Item3, result.Rest.Rest.Item4)));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, new Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4, result.Rest.Item5, result.Rest.Item6, result.Rest.Item7, new Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>>(result.Rest.Rest.Item1, result.Rest.Rest.Item2, result.Rest.Rest.Item3, result.Rest.Rest.Item4, result.Rest.Rest.Item5)));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>, List<T20>>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>(string sql, object parameters = null)
+        {
+            var result = SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>, List<T20>>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, new Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>, List<T20>>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4, result.Rest.Item5, result.Rest.Item6, result.Rest.Item7, new Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>, List<T20>>(result.Rest.Rest.Item1, result.Rest.Rest.Item2, result.Rest.Rest.Item3, result.Rest.Rest.Item4, result.Rest.Rest.Item5, result.Rest.Rest.Item6)));
+        }
+        public Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>, List<T20>, List<T21>>>> SqlQuery<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>(string sql, object parameters = null)
+        {
+            var parsmeterArray = this.GetParameters(parameters);
+            this.Context.InitMappingInfo<T>();
+            var builder = InstanceFactory.GetSqlbuilder(this.Context.CurrentConnectionConfig);
+            builder.SqlQueryBuilder.sql.Append(sql);
+            if (parsmeterArray != null && parsmeterArray.Any())
+                builder.SqlQueryBuilder.Parameters.AddRange(parsmeterArray);
+            using (var dataReader = this.GetDataReader(builder.SqlQueryBuilder.ToSqlString(), builder.SqlQueryBuilder.Parameters.ToArray()))
+            {
+                DbDataReader DbReader = (DbDataReader)dataReader;
+                List<T> result = new List<T>();
+                if (DbReader.HasRows)
+                {
+                    result = GetData<T>(typeof(T), dataReader);
+                }
+                else
+                {
+                    dataReader.Read();
+                }
+                List<T2> result2 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T2>();
+                    result2 = GetData<T2>(typeof(T2), dataReader);
+                }
+                List<T3> result3 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T3>();
+                    result3 = GetData<T3>(typeof(T3), dataReader);
+                }
+                List<T4> result4 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T4>();
+                    result4 = GetData<T4>(typeof(T4), dataReader);
+                }
+                List<T5> result5 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T5>();
+                    result5 = GetData<T5>(typeof(T5), dataReader);
+                }
+                List<T6> result6 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T6>();
+                    result6 = GetData<T6>(typeof(T6), dataReader);
+                }
+                List<T7> result7 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T7>();
+                    result7 = GetData<T7>(typeof(T7), dataReader);
+                }
+                List<T8> result8 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T8>();
+                    result8 = GetData<T8>(typeof(T8), dataReader);
+                }
+                List<T9> result9 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T9>();
+                    result9 = GetData<T9>(typeof(T9), dataReader);
+                }
+                List<T10> result10 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T10>();
+                    result10 = GetData<T10>(typeof(T10), dataReader);
+                }
+                List<T11> result11 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T11>();
+                    result11 = GetData<T11>(typeof(T11), dataReader);
+                }
+                List<T12> result12 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T12>();
+                    result12 = GetData<T12>(typeof(T12), dataReader);
+                }
+                List<T13> result13 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T13>();
+                    result13 = GetData<T13>(typeof(T13), dataReader);
+                }
+                List<T14> result14 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T14>();
+                    result14 = GetData<T14>(typeof(T14), dataReader);
+                }
+                List<T15> result15 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T15>();
+                    result15 = GetData<T15>(typeof(T15), dataReader);
+                }
+                List<T16> result16 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T16>();
+                    result16 = GetData<T16>(typeof(T16), dataReader);
+                }
+                List<T17> result17 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T17>();
+                    result17 = GetData<T17>(typeof(T17), dataReader);
+                }
+                List<T18> result18 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T18>();
+                    result18 = GetData<T18>(typeof(T18), dataReader);
+                }
+                List<T19> result19 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T19>();
+                    result19 = GetData<T19>(typeof(T19), dataReader);
+                }
+                List<T20> result20 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T20>();
+                    result20 = GetData<T20>(typeof(T20), dataReader);
+                }
+                List<T21> result21 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T21>();
+                    result21 = GetData<T21>(typeof(T21), dataReader);
+                }
+                builder.SqlQueryBuilder.Clear();
+                if (this.Context.Ado.DataReaderParameters != null)
+                {
+                    foreach (IDataParameter item in this.Context.Ado.DataReaderParameters)
+                    {
+                        var parameter = parsmeterArray.FirstOrDefault(it => item.ParameterName.Substring(1) == it.ParameterName.Substring(1));
+                        if (parameter != null)
+                        {
+                            parameter.Value = item.Value;
+                        }
+                    }
+                    this.Context.Ado.DataReaderParameters = null;
+                }
+                return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>, List<T20>, List<T21>>>>(result, result2, result3, result4, result5, result6, result7, new Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>, Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>, List<T20>, List<T21>>>(result8, result9, result10, result11, result12, result13, result14, new Tuple<List<T15>, List<T16>, List<T17>, List<T18>, List<T19>, List<T20>, List<T21>>(result15, result16, result17, result18, result19, result20, result21)));
+            }
+        }
         public virtual Task<List<T>> SqlQueryAsync<T>(string sql, object parameters = null)
         {
             var sugarParameters = this.GetParameters(parameters);
@@ -1028,7 +1358,7 @@ namespace SqlSugar
         }
         public async Task<Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>>> SqlQueryAsync<T, T2, T3, T4, T5, T6>(string sql, object parameters = null)
         {
-            var result =await SqlQueryAsync<T, T2, T3, T4, T5, T6, object>(sql, parameters);
+            var result = await SqlQueryAsync<T, T2, T3, T4, T5, T6, object>(sql, parameters);
             return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6);
         }
         public async Task<Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>>> SqlQueryAsync<T, T2, T3, T4, T5, T6, T7>(string sql, object parameters = null)
@@ -1097,6 +1427,150 @@ namespace SqlSugar
                     this.Context.Ado.DataReaderParameters = null;
                 }
                 return Tuple.Create<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>>(result, result2, result3, result4, result5, result6, result7);
+            }
+        }
+        public async Task<Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>>>> SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8>(string sql, object parameters = null)
+        {
+            var result = await SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, object, object, object, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>>(result.Rest.Item1));
+        }
+        public async Task<Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>>>> SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, T9>(string sql, object parameters = null)
+        {
+            var result = await SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, T9, object, object, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>, List<T9>>(result.Rest.Item1, result.Rest.Item2));
+        }
+        public async Task<Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>>>> SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, T9, T10>(string sql, object parameters = null)
+        {
+            var result = await SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, object, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>, List<T9>, List<T10>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3));
+        }
+        public async Task<Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>>>> SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(string sql, object parameters = null)
+        {
+            var result = await SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, object, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>, List<T9>, List<T10>, List<T11>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4));
+        }
+        public async Task<Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>>>> SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(string sql, object parameters = null)
+        {
+            var result = await SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, object, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4, result.Rest.Item5));
+        }
+        public async Task<Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>>>> SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(string sql, object parameters = null)
+        {
+            var result = await SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, object>(sql, parameters);
+            return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>>>(result.Item1, result.Item2, result.Item3, result.Item4, result.Item5, result.Item6, result.Item7, Tuple.Create<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>>(result.Rest.Item1, result.Rest.Item2, result.Rest.Item3, result.Rest.Item4, result.Rest.Item5, result.Rest.Item6));
+        }
+        public async Task<Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>>>> SqlQueryAsync<T, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(string sql, object parameters = null)
+        {
+            var parsmeterArray = this.GetParameters(parameters);
+            this.Context.InitMappingInfo<T>();
+            var builder = InstanceFactory.GetSqlbuilder(this.Context.CurrentConnectionConfig);
+            builder.SqlQueryBuilder.sql.Append(sql);
+            if (parsmeterArray != null && parsmeterArray.Any())
+                builder.SqlQueryBuilder.Parameters.AddRange(parsmeterArray);
+            using (var dataReader = await this.GetDataReaderAsync(builder.SqlQueryBuilder.ToSqlString(), builder.SqlQueryBuilder.Parameters.ToArray()))
+            {
+                DbDataReader DbReader = (DbDataReader)dataReader;
+                List<T> result = new List<T>();
+                if (DbReader.HasRows)
+                {
+                    result = await GetDataAsync<T>(typeof(T), dataReader);
+                }
+                else
+                {
+                    dataReader.Read();
+                }
+                List<T2> result2 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T2>();
+                    result2 = await GetDataAsync<T2>(typeof(T2), dataReader);
+                }
+                List<T3> result3 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T3>();
+                    result3 = await GetDataAsync<T3>(typeof(T3), dataReader);
+                }
+                List<T4> result4 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T4>();
+                    result4 = await GetDataAsync<T4>(typeof(T4), dataReader);
+                }
+                List<T5> result5 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T5>();
+                    result5 = await GetDataAsync<T5>(typeof(T5), dataReader);
+                }
+                List<T6> result6 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T6>();
+                    result6 = await GetDataAsync<T6>(typeof(T6), dataReader);
+                }
+                List<T7> result7 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T7>();
+                    result7 = await GetDataAsync<T7>(typeof(T7), dataReader);
+                }
+                List<T8> result8 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T8>();
+                    result8 = await GetDataAsync<T8>(typeof(T8), dataReader);
+                }
+                List<T9> result9 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T9>();
+                    result9 = await GetDataAsync<T9>(typeof(T9), dataReader);
+                }
+                List<T10> result10 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T10>();
+                    result10 = await GetDataAsync<T10>(typeof(T10), dataReader);
+                }
+                List<T11> result11 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T11>();
+                    result11 = await GetDataAsync<T11>(typeof(T11), dataReader);
+                }
+                List<T12> result12 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T12>();
+                    result12 = await GetDataAsync<T12>(typeof(T12), dataReader);
+                }
+                List<T13> result13 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T13>();
+                    result13 = await GetDataAsync<T13>(typeof(T13), dataReader);
+                }
+                List<T14> result14 = null;
+                if (NextResult(dataReader))
+                {
+                    this.Context.InitMappingInfo<T14>();
+                    result14 = await GetDataAsync<T14>(typeof(T14), dataReader);
+                }
+                builder.SqlQueryBuilder.Clear();
+                if (this.Context.Ado.DataReaderParameters != null)
+                {
+                    foreach (IDataParameter item in this.Context.Ado.DataReaderParameters)
+                    {
+                        var parameter = parsmeterArray.FirstOrDefault(it => item.ParameterName.Substring(1) == it.ParameterName.Substring(1));
+                        if (parameter != null)
+                        {
+                            parameter.Value = item.Value;
+                        }
+                    }
+                    this.Context.Ado.DataReaderParameters = null;
+                }
+                return new Tuple<List<T>, List<T2>, List<T3>, List<T4>, List<T5>, List<T6>, List<T7>, Tuple<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>>>(result, result2, result3, result4, result5, result6, result7, Tuple.Create<List<T8>, List<T9>, List<T10>, List<T11>, List<T12>, List<T13>, List<T14>>(result8, result9, result10, result11, result12, result13, result14));
             }
         }
 
